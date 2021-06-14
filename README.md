@@ -1,7 +1,7 @@
 
-    AirForce One SSH - Backup automation
-================================================
-================================================
+  AirForce One SSH - Backup automation
+  ================
+
 
 
 The script intends to replace latest build over to a server 
