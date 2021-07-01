@@ -1,3 +1,16 @@
+'''
+========================
+SSH Automation
+
+The script intends to replace latest build over to a server 
+Author Danwand NS | admin@danwand.me
+
+01 Jul 2021
+========================
+This code is created strictly over the handovered files by Vishnu053
+The code does nothing otherthan how the Shell script was intended to do
+
+'''
 
 import os #Executing os commands directly
 class main():
