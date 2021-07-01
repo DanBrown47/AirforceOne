@@ -1,5 +1,8 @@
+import re
 import sys
 from dotenv import dotenv_values
+import argparse
+
 '''
 ========================
 SSH Automation
@@ -11,9 +14,25 @@ Author Danwand NS | admin@danwand.me
 ========================
 '''
 def check_env():
-    # Load
+    # Loads variables
     env = dotenv_values(".env")
     server_ip, server_name, pem_file_name = env["SERVER_IP"], env["SERVER_USER"], env["SERVER_PEM_LOCATION"]
+
+    '''
+    Verify the creds given by user is correct
+    Human is error
+
+    Current Method 
+    IP -> Regex
+    Server_name -> Whatever
+    Pem_path -> loc and perms
+    '''
+    REG_EX_IP_PATTERN = "^((25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$"
+    
+    if re.match(REG_EX_IP_PATTERN,server_ip):
+        print("True")
+    else:
+        print("False")
 
 
 
